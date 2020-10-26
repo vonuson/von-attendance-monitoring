@@ -1,0 +1,895 @@
+{
+	"info": {
+		"_postman_id": "10cf1a8e-7a6e-437b-a386-f63de2d768a4",
+		"name": "NodeJS Magenic Master - Final Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "Get All Members",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/members",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Member By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/members/5f96476f48c3e6446c8f8495",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"5f96476f48c3e6446c8f8495"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - GET Member By Id - invalid id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/members/5f95535d2f81732b1c22a0e4xxx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"5f95535d2f81732b1c22a0e4xxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - GET Member By Id - does not exists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/members/5f95535d2f81732b1c22a0e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"5f95535d2f81732b1c22a0e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Add Member",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"New Employee Demo\",\r\n    \"joinedDate\": \"10/26/2020\",\r\n    \"status\": \"Active\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/members",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validaiton POST Add Member - property validation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/members",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Update Member",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Von Rhitz Adrian Uson\",\r\n    \"joinedDate\": \"2014-07-07\",\r\n    \"status\": \"Active\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/members/5f96476f48c3e6446c8f8495",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"5f96476f48c3e6446c8f8495"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - PUT Update Member - Invalid Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Principal Developer Von\",\r\n    \"joinedDate\": null,\r\n    \"status\": \"Active\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/members/5f956252647cf6151444e0a3xxx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"5f956252647cf6151444e0a3xxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - PUT Update Member - property validation",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/members/5f956252647cf6151444e0a3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"5f956252647cf6151444e0a3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Member",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/members/5f96496648c3e6446c8f849f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"5f96496648c3e6446c8f849f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - DELETE Member - Invalid Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/members/5f95535d2f81732b1c22a0e4xxx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"5f95535d2f81732b1c22a0e4xxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - DELETE Member - already has event associated",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/members/5f96476f48c3e6446c8f8495",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"5f96476f48c3e6446c8f8495"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/members/search?name=Von%20Rhitz&status=active",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Von%20Rhitz"
+								},
+								{
+									"key": "status",
+									"value": "active"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - Search Member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/members/search?name=Von%20uson&status=activex",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Von%20uson"
+								},
+								{
+									"key": "status",
+									"value": "activex"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "Get Events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Event By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/events/5f96480148c3e6446c8f849a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"5f96480148c3e6446c8f849a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation GET Event By Id - invalid id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/events/5f9553562f81732b1c22a0e3xxx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"5f9553562f81732b1c22a0e3xxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation GET Event By Id - does not exists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/events/5f9553562f81732b1c22a0e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"5f9553562f81732b1c22a0e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Add Event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventName\": \"New Event\",\r\n    \"eventType\": \"Demo\",\r\n    \"startDateTime\": \"2020-10-26T22:00:00.000+08:00\",\r\n    \"endDateTime\": \"2020-10-26T22:30:00.000+08:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validaiton POST Event - property validation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Update Event",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventName\": \"Event Update Demo - Updated\",\r\n    \"eventType\": \"Project\",\r\n    \"startDateTime\": \"2020-10-24T14:00:00.000Z\",\r\n    \"endDateTime\": \"2020-10-24T14:30:00.000Z\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/events/5f96474648c3e6446c8f8494",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"5f96474648c3e6446c8f8494"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - PUT Update Event - Invalid Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventName\": \"Sprint Planning 2\",\r\n    \"eventType\": \"Project\",\r\n    \"startDateTime\": \"2020-10-24T22:00:00.000+08:00\",\r\n    \"endDateTime\": \"2020-10-24T22:30:00.000+08:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/events/5f958a91539dd548d087af35xx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"5f958a91539dd548d087af35xx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - PUT Update Event - property validation",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/events/5f96474648c3e6446c8f8494",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"5f96474648c3e6446c8f8494"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Event",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/events/5f96473848c3e6446c8f8493",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"5f96473848c3e6446c8f8493"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - DELETE Event - invalid id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/events/5f9482c988f099565ca81538xx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"5f9482c988f099565ca81538xx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - DELETE Event - already has member associated",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/events/5f96480148c3e6446c8f849a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"5f96480148c3e6446c8f849a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Event",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/events/search?eventname=node&datestart=2020-10-26T14%3A00%3A00.000Z&dateend=2020-10-26T16%3A30%3A00.000Z",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"search"
+							],
+							"query": [
+								{
+									"key": "eventname",
+									"value": "node"
+								},
+								{
+									"key": "datestart",
+									"value": "2020-10-26T14%3A00%3A00.000Z"
+								},
+								{
+									"key": "dateend",
+									"value": "2020-10-26T16%3A30%3A00.000Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export Event to Excel",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Disposition",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/events/export/5f96480148c3e6446c8f849a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"export",
+								"5f96480148c3e6446c8f849a"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Attendance",
+			"item": [
+				{
+					"name": "Insert Attendance",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"timeIn\": \"2020-10-24T14:01:00.000Z\",\r\n    \"member\": \"5f96479c48c3e6446c8f8496\",\r\n    \"event\": \"5f96471d48c3e6446c8f8492\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/attendance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"attendance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - Insert Attendance - property validation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/attendance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"attendance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - Update Attendance",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"timeIn\": \"2020-10-24T14:00:00.000Z\",\r\n    \"timeOut\": \"2020-10-24T14:30:00.000+00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/attendance/5f9649fb48c3e6446c8f84a0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"attendance",
+								"5f9649fb48c3e6446c8f84a0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - Update Attendance - Invalid Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"timeIn\": \"2020-10-24T16:00:00.000Z\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/attendance/5f9553882f81732b1c22a0e5xx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"attendance",
+								"5f9553882f81732b1c22a0e5xx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation - Update Attendance - property validation",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/attendance/5f9649fb48c3e6446c8f84a0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"attendance",
+								"5f9649fb48c3e6446c8f84a0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Attendance",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4000/attendance/5f964e1e271ec66f484664d4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"attendance",
+								"5f964e1e271ec66f484664d4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

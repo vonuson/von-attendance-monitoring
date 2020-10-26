@@ -1,0 +1,28 @@
+{
+  "name": "von-attendance-monitoring",
+  "version": "1.0.0",
+  "description": "Attendance monitoring for small event powered by NodeJS. This is for educational purposes and part of Magenic Masters in NodeJS.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Von Uson",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "excel4node": "^1.7.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.10.9",
+    "nodemon": "^2.0.6",
+    "uuid": "^8.3.1"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500"
+  }
+}
