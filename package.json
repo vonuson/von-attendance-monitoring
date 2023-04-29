@@ -13,7 +13,7 @@
     "excel4node": "^1.7.2",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "mongoose": "^5.10.9",
     "nodemon": "^2.0.6",
     "uuid": "^8.3.1"
